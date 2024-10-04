@@ -75,7 +75,7 @@ impl AllMetricEntity {
         port: &str,
     ) -> Vec<MetricEntity>
     {
-        let data_from_http = utility::http_get(host, port, "metrics");
+        let data_from_http = utility::http_get(host, port, "metrics?reset_histograms=false");
         AllMetricEntity::parse_metrics(data_from_http, host, port)
     }
     fn parse_metrics(
