@@ -68,7 +68,7 @@ This is how hostnames or ip addresses are specified:
 ```
 ./target/release/yb_stats --hosts 192.168.66.80,192.168.66.81,192.168.66.82
 ```
-yb_stats will collect statistics from the ports 7000, 9000, 12000, 13000 and 9300 by default. If this list needs to be changed, you can specify the required ports list using the `-p` or `--ports` switch, for example:
+yb_stats will collect statistics from the ports 7000, 9000, 12000 and 13000 by default. Node exporter -- 9300 is not included by default. If this list needs to be changed, you can specify the required ports list using the `-p` or `--ports` switch, for example:
 ```
 ./target/release/yb_stats --ports 9000,13001
 ```

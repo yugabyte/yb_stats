@@ -75,7 +75,7 @@ impl AllNodeExporter {
         port: &str,
     ) -> Vec<NodeExporter>
     {
-        let data_from_http = utility::http_get(host, port, "metrics");
+        let data_from_http = utility::http_get(host, port, "metrics?reset_histograms=false");
         AllNodeExporter::parse_nodeexporter(data_from_http)
     }
     fn parse_nodeexporter( 
